@@ -380,6 +380,42 @@ nav {
   color: var(--muted);
 }
 .proj-card:hover .ptag { border-color: rgba(108,99,255,0.3); }
+.proj-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.proj-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.proj-link.live {
+  background: var(--purple);
+  border: 1px solid var(--purple);
+  color: white;
+}
+.proj-link.live:hover {
+  background: var(--purple-dark);
+  border-color: var(--purple-dark);
+  transform: translateY(-1px);
+}
+.proj-link.github {
+  background: white;
+  border: 1px solid var(--border);
+  color: var(--purple);
+}
+.proj-link.github:hover {
+  border-color: var(--purple);
+  transform: translateY(-1px);
+}
 
 /* Featured project */
 .proj-card.featured {
@@ -393,6 +429,24 @@ nav {
 .proj-card.featured .proj-desc b { color: #FFE08A; }
 .proj-card.featured .ptag { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.2); color: white; }
 .proj-card.featured .proj-num { color: rgba(255,255,255,0.2); }
+.proj-card.featured .proj-link.live {
+  background: white;
+  border-color: white;
+  color: var(--purple);
+}
+.proj-card.featured .proj-link.live:hover {
+  background: rgba(255,255,255,0.92);
+  border-color: rgba(255,255,255,0.92);
+}
+.proj-card.featured .proj-link.github {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.28);
+  color: white;
+}
+.proj-card.featured .proj-link.github:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.4);
+}
 
 /* ---------- ACHIEVEMENTS ---------- */
 #achievements { background: var(--bg); }
@@ -757,10 +811,28 @@ footer span { font-size: 0.8rem; color: var(--muted); }
         <div class="proj-techs">
           <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">MongoDB</span><span class="ptag">Redis</span><span class="ptag">BullMQ</span><span class="ptag">Socket.io</span><span class="ptag">Llama-3</span><span class="ptag">BGE</span>
         </div>
+        <div class="proj-actions">
+          <a href="https://review-guard-8dcn.onrender.com/" class="proj-link live" target="_blank" rel="noopener noreferrer" aria-label="Open ReviewGuard live app">Live app</a>
+          <a href="https://github.com/Keerthishreekesavan/Review-Guard" class="proj-link github" target="_blank" rel="noopener noreferrer" aria-label="Open ReviewGuard GitHub repository">Github</a>
+        </div>
       </div>
 
       <div class="proj-card reveal">
         <span class="proj-num">02</span>
+        <div class="proj-type">Hybrid ML + Geospatial</div>
+        <div class="proj-name">Explainable AI for Air Quality Prediction</div>
+        <div class="proj-desc">SVM+GNB hybrid with <b>96.2% AQI accuracy</b>. SHAP/LIME explainability + interactive geospatial map for real-time health risk monitoring.</div>
+        <div class="proj-techs">
+          <span class="ptag">SVM</span><span class="ptag">Naive Bayes</span><span class="ptag">SHAP</span><span class="ptag">LIME</span><span class="ptag">Geospatial</span>
+        </div>
+        <div class="proj-actions">
+          <a href="https://intelligent-air-quality-monitoring-disease-risk-assessment-xai.streamlit.app/" class="proj-link live" target="_blank" rel="noopener noreferrer" aria-label="Open Explainable AI for Air Quality Prediction live app">Live app</a>
+          <a href="https://github.com/Keerthishreekesavan/Intelligent-Air-Quality-Monitoring-Disease-Risk-Assessment-Platform-using-Hybrid-XAI" class="proj-link github" target="_blank" rel="noopener noreferrer" aria-label="Open Explainable AI for Air Quality Prediction GitHub repository">Github</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-num">03</span>
         <div class="proj-type">NLP + Cloud</div>
         <div class="proj-name">Automated Answer Evaluation System</div>
         <div class="proj-desc">BERT-based semantic similarity scoring for subjective answers. Integrated <b>AWS Textract</b> OCR. Outperforms TF-IDF approaches by evaluating conceptual correctness.</div>
@@ -770,7 +842,7 @@ footer span { font-size: 0.8rem; color: var(--muted); }
       </div>
 
       <div class="proj-card reveal">
-        <span class="proj-num">03</span>
+        <span class="proj-num">04</span>
         <div class="proj-type">Reinforcement Learning</div>
         <div class="proj-name">3D RL Traffic Signal Control + Ambulance Priority</div>
         <div class="proj-desc">Policy Gradient & Q-Learning for smart signal timing. <b>45% reduction in wait times</b> and <b>83% faster emergency response</b> with ambulance priority logic.</div>
@@ -780,22 +852,12 @@ footer span { font-size: 0.8rem; color: var(--muted); }
       </div>
 
       <div class="proj-card reveal">
-        <span class="proj-num">04</span>
+        <span class="proj-num">05</span>
         <div class="proj-type">AutoML + XAI</div>
         <div class="proj-name">Heart Disease Risk Prediction</div>
         <div class="proj-desc">AutoML pipeline with <b>~76% validation accuracy</b> and SHAP-based feature interpretability. Interactive Streamlit UI with downloadable PDF/CSV reports.</div>
         <div class="proj-techs">
           <span class="ptag">Python</span><span class="ptag">AutoML</span><span class="ptag">SHAP</span><span class="ptag">Streamlit</span>
-        </div>
-      </div>
-
-      <div class="proj-card reveal">
-        <span class="proj-num">05</span>
-        <div class="proj-type">Hybrid ML + Geospatial</div>
-        <div class="proj-name">Explainable AI for Air Quality Prediction</div>
-        <div class="proj-desc">SVM+GNB hybrid with <b>96.2% AQI accuracy</b>. SHAP/LIME explainability + interactive geospatial map for real-time health risk monitoring.</div>
-        <div class="proj-techs">
-          <span class="ptag">SVM</span><span class="ptag">Naive Bayes</span><span class="ptag">SHAP</span><span class="ptag">LIME</span><span class="ptag">Geospatial</span>
         </div>
       </div>
 
