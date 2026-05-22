@@ -341,6 +341,40 @@ nav {
   font-size: 0.55rem; top: 0.5em; color: rgba(255,255,255,0.6);
 }
 
+.research-card .proj-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+.research-card .proj-link {
+  min-width: 142px;
+  padding: 14px 28px;
+  font-size: 0.82rem;
+}
+.research-card .proj-link.live {
+  background: white;
+  border-color: white;
+  color: var(--purple);
+  box-shadow: 0 12px 28px rgba(36, 22, 116, 0.18);
+}
+.research-card .proj-link.live:hover {
+  background: rgba(255,255,255,0.94);
+  border-color: rgba(255,255,255,0.94);
+  color: var(--purple-dark);
+}
+.research-card .proj-link.github {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: white;
+  backdrop-filter: blur(8px);
+}
+.research-card .proj-link.github:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.34);
+  color: white;
+}
+
 /* ---------- PROJECTS ---------- */
 #projects { background: white; }
 .projects-grid {
@@ -787,6 +821,10 @@ footer span { font-size: 0.8rem; color: var(--muted); }
         <li>Integrated LIME and SHAP for local and global explainability - transparent, trustworthy predictions.</li>
         <li>Built an interactive geospatial dashboard for real-time air quality and health risk visualization.</li>
       </ul>
+      <div class="proj-actions">
+          <a href="https://intelligent-air-quality-monitoring-disease-risk-assessment-xai.streamlit.app/" class="proj-link live" target="_blank" rel="noopener noreferrer" aria-label="Open Explainable AI for Air Quality Prediction live app">Live app</a>
+          <a href="https://github.com/Keerthishreekesavan/Intelligent-Air-Quality-Monitoring-Disease-Risk-Assessment-Platform-using-Hybrid-XAI" class="proj-link github" target="_blank" rel="noopener noreferrer" aria-label="Open Explainable AI for Air Quality Prediction GitHub repository">Github</a>
+        </div>
     </div>
   </div>
 </section>
